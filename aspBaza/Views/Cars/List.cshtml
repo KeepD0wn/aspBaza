@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html>
+
+<div class="all_info">
+    <h1 >Все авто</h1>
+    <h3>@Model.currentCategory</h3>
+    @{
+        foreach (var car in Model.AllCars)
+        {
+            <div class="car_info">
+                <h2>Модель: @car.Name</h2>
+                <p>Цена: @car.price.ToString("c")</p>
+                <img src="@car.Img"/>
+            </div>
+        }
+    }
+</div>
